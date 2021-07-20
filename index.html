@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Convertir Temperatura</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function conversion1(){
+                var n1=parseFloat(document.MyForm.numero1.value);
+                var conv1=(n1*(9/5))+32;
+                resul=document.getElementById("resultado");
+                resul.innerHTML=conv1;
+            }
+            function conversion2(){
+                var n1=parseFloat(document.MyForm.numero1.value);
+                var conv2=(n1-32)*(5/9);
+                resul=document.getElementById("resultado");
+                resul.innerHTML=conv2; 
+            }
+        </script>    
+    </head>
+    <body>
+        <Form name="MyForm">
+            <center>
+                <h1>CONVERSIÓN DE TEMPERATURA</h1><br>
+                <img src="temperatura.jpg" style="width: 30%">
+                <h3>Ingresa la temperatura a convertir:</h3>
+                <h3><input type="text" name="numero1" size="2" style="text-align:center"><br></h3>
+                <input type="button" class="btn btn-info" value="Pasar °C a °F" onclick="conversion1()">
+                <input type="button" class="btn btn-info" value="Pasar °F a °C" onclick="conversion2()"><br>
+                <h3 id="resultado" style="color:#007bff"></h3><br>
+            </center>    
+        </Form>
+    </body>
+</html>
+
